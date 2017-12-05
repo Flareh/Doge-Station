@@ -1,160 +1,160 @@
 
 var/const/ENGSEC			=(1<<0)
 
-var/const/CAPTAIN			=(1<<0)
+var/const/CAPITÃO			=(1<<0)
 var/const/HOS				=(1<<1)
-var/const/WARDEN			=(1<<2)
-var/const/DETECTIVE			=(1<<3)
-var/const/OFFICER			=(1<<4)
-var/const/CHIEF				=(1<<5)
-var/const/ENGINEER			=(1<<6)
-var/const/ATMOSTECH			=(1<<7)
+var/const/DIRETOR			=(1<<2)
+var/const/DETETIVE			=(1<<3)
+var/const/OFICIAL			=(1<<4)
+var/const/CHEFE  			=(1<<5)
+var/const/ENGENHEIRO			=(1<<6)
+var/const/ATMOSFÉRICOS			=(1<<7)
 var/const/AI				=(1<<8)
-var/const/CYBORG			=(1<<9)
+var/const/CIBORGUE			=(1<<9)
 var/const/CENTCOM			=(1<<10)
 
 var/const/MEDSCI			=(1<<1)
 
 var/const/RD				=(1<<0)
-var/const/SCIENTIST			=(1<<1)
-var/const/CHEMIST			=(1<<2)
+var/const/CIENTISTA			=(1<<1)
+var/const/QUÍMICO			=(1<<2)
 var/const/CMO				=(1<<3)
-var/const/DOCTOR			=(1<<4)
-var/const/GENETICIST		=(1<<5)
-var/const/VIROLOGIST		=(1<<6)
-var/const/PSYCHIATRIST		=(1<<7)
-var/const/ROBOTICIST		=(1<<8)
-var/const/PARAMEDIC			=(1<<9)
-var/const/CORONER			=(1<<10)
+var/const/DOUTOR			=(1<<4)
+var/const/GENETICISTA		=(1<<5)
+var/const/VIROLOGISTA		=(1<<6)
+var/const/PSIQUIATRA		=(1<<7)
+var/const/ROBOTICISTA		=(1<<8)
+var/const/PARAMEDICO			=(1<<9)
+var/const/LEGISTA			=(1<<10)
 
 
-var/const/SUPPORT			=(1<<2)
+var/const/SUPORTE			=(1<<2)
 
 var/const/HOP				=(1<<0)
-var/const/BARTENDER			=(1<<1)
-var/const/BOTANIST			=(1<<2)
-var/const/CHEF				=(1<<3)
-var/const/JANITOR			=(1<<4)
-var/const/LIBRARIAN			=(1<<5)
-var/const/QUARTERMASTER		=(1<<6)
-var/const/CARGOTECH			=(1<<7)
-var/const/MINER				=(1<<8)
-var/const/LAWYER			=(1<<9)
-var/const/CHAPLAIN			=(1<<10)
-var/const/CLOWN				=(1<<11)
-var/const/MIME				=(1<<12)
-var/const/CIVILIAN			=(1<<13)
+var/const/GARÇON DE BAR			=(1<<1)
+var/const/BOTANICO			=(1<<2)
+var/const/CHEFE				=(1<<3)
+var/const/FAXINEIRO			=(1<<4)
+var/const/BIBLIOTECéRIO			=(1<<5)
+var/const/CONTRAMESTRE		=(1<<6)
+var/const/TECNICO DE CARGAS			=(1<<7)
+var/const/MINERADOR 			=(1<<8)
+var/const/ADVÓGADO			=(1<<9)
+var/const/PADRE			=(1<<10)
+var/const/PALHAÇO				=(1<<11)
+var/const/MIMICO				=(1<<12)
+var/const/CIVIL			=(1<<13)
 
 
 var/const/KARMA				=(1<<3)
 
 var/const/NANO				=(1<<0)
 var/const/BLUESHIELD		=(1<<1)
-var/const/BARBER			=(1<<3)
+var/const/BARBEIRO			=(1<<3)
 var/const/MECHANIC			=(1<<4)
 var/const/BRIGDOC			=(1<<5)
-var/const/JUDGE				=(1<<6)
-var/const/PILOT				=(1<<7)
+var/const/JUIZ				=(1<<6)
+var/const/PILOTO				=(1<<7)
 
 var/list/assistant_occupations = list(
 )
 
 var/list/command_positions = list(
-	"Captain",
-	"Head of Personnel",
-	"Head of Security",
-	"Chief Engineer",
-	"Research Director",
-	"Chief Medical Officer"
+	"Capitão",
+	"Chefe Pessoal",
+	"Chefe da Segurança",
+	"Engenheiro Chefe",
+	"Diretor de Pesquisa",
+	"Chefe Medico"
 )
 
 var/list/engineering_positions = list(
-	"Chief Engineer",
-	"Station Engineer",
-	"Life Support Specialist",
-	"Mechanic"
+	"Engenheiro Chefe",
+	"Enhenheiro",
+	"Especialista em apoio à vida",
+	"Mecanico"
 )
 
 
 var/list/medical_positions = list(
-	"Chief Medical Officer",
-	"Medical Doctor",
-	"Geneticist",
-	"Psychiatrist",
-	"Chemist",
-	"Virologist",
-	"Paramedic",
-	"Coroner"
+	"Chefe Medico",
+	"Doutor Medico",
+	"Geneticista",
+	"Psiquiatra",
+	"Quimico",
+	"Virologista",
+	"Paramedico",
+	"Legista"
 )
 
 
 var/list/science_positions = list(
-	"Research Director",
-	"Scientist",
-	"Geneticist",	//Part of both medical and science
-	"Roboticist",
+	"Diretor de Pesquisa",
+	"Cientista",
+	"Geneticista",	//Part of both medical and science
+	"Roboticista",
 )
 
 //BS12 EDIT
 var/list/support_positions = list(
-	"Head of Personnel",
-	"Bartender",
-	"Botanist",
-	"Chef",
-	"Janitor",
-	"Librarian",
+	"Chefe Pessoal",
+	"Garçon do Bar",
+	"Botanico",
+	"Chefe",
+	"Faxineiro",
+	"Bibliotecário",
 	"Quartermaster",
-	"Cargo Technician",
-	"Shaft Miner",
-	"Internal Affairs Agent",
-	"Chaplain",
-	"Clown",
-	"Mime",
-	"Barber",
-	"Magistrate",
-	"Nanotrasen Representative",
+	"Tecnico de Carga",
+	"Minerador",
+	"Agente de assuntos internos",
+	"Padre",
+	"Palhaço",
+	"Mimico",
+	"Barbeiro",
+	"Magistrado",
+	"Representante da Nanotrasen",
 	"Blueshield"
 )
 
 var/list/supply_positions = list(
-	"Head of Personnel",
+	"Chefe Pessoal",
 	"Quartermaster",
-	"Cargo Technician",
-	"Shaft Miner"
+	"Tecnico de Cargas",
+	"Minerador"
 )
 
-var/list/service_positions = support_positions - supply_positions + list("Head of Personnel")
+var/list/service_positions = support_positions - supply_positions + list("Chefe Pessoal")
 
 
 var/list/security_positions = list(
-	"Head of Security",
-	"Warden",
-	"Detective",
-	"Security Officer",
-	"Brig Physician",
-	"Security Pod Pilot"
+	"Chefe da Segurança",
+	"Diretor",
+	"Detetive",
+	"Oficial de Segurança",
+	"Medico da Segurança",
+	"Piloto de Pod da Segurança"
 )
 
 
 var/list/civilian_positions = list(
-	"Civilian"
+	"Civil"
 )
 
 var/list/nonhuman_positions = list(
 	"AI",
-	"Cyborg",
+	"Ciborgue",
 	"Drone",
 	"pAI"
 )
 
 var/list/whitelisted_positions = list(
 	"Blueshield",
-	"Nanotrasen Representative",
-	"Barber",
-	"Mechanic",
-	"Brig Physician",
-	"Magistrate",
-	"Security Pod Pilot",
+	"Representante da Nanotrasen",
+	"Barbeiro",
+	"Mecanico",
+	"Medico da Segurança",
+	"Magistrado",
+	"Piloto de Pod da Segurança",
 )
 
 
@@ -177,16 +177,16 @@ var/list/whitelisted_positions = list(
 	var/list/titles = list()
 
 	for(var/datum/job/J in jobs)
-		if(!J)	continue
+		if(!J)	continuar
 		if(J.title == job)
-			titles = J.alt_titles
+			title = J.alt_title
 
 	return titles
 
 var/global/list/exp_jobsmap = list(
-	EXP_TYPE_LIVING = list(), // all living mobs
-	EXP_TYPE_CREW = list(titles = command_positions | engineering_positions | medical_positions | science_positions | support_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg") | whitelisted_positions), // crew positions
-	EXP_TYPE_SPECIAL = list(), // antags, ERT, etc
-	EXP_TYPE_GHOST = list(), // dead people, observers
-	EXP_TYPE_EXEMPT = list() // special grandfather setting
+	EXP_TYPE_LIVING = list(), // Todos animais vivos
+	EXP_TYPE_CREW = list(titles = Posições_do_comando | posições_da_engenharia | posições_da_medicina | posições_da_ciencia | posições_de_suporte | posições_de_abastecedores | posições_da_segurança | posições_de_civil | lista("AI","Ciborgue") | whitelisted_positions), // posições da tripulação
+	EXP_TYPE_SPECIAL = list(), // Vilões, ERT, etc
+	EXP_TYPE_GHOST = list(), // pessoas mortas, observadores
+	EXP_TYPE_EXEMPT = list() // configuração especial do avô
 )
