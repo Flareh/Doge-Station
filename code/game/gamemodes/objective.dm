@@ -189,7 +189,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 	return shuttle_master.emergency.is_hijacked()
 
 /datum/objective/hijackclone
-	explanation_text = "Sequestre a shuttle garantindo que você (ou suas cópias) escape vivo."
+	explanation_text = "Sequestre a shuttle garantindo que vocÃª (ou suas cÃ³pias) escape vivo."
 	martyr_compatible = 0
 
 /datum/objective/hijackclone/check_completion()
@@ -245,7 +245,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 	return 1
 
 /datum/objective/escape
-	explanation_text = "Escape da estação por um pod de emergencia ou pela shuttle, vivo e livre."
+	explanation_text = "Escape da estaÃ§Ã£o por um pod de emergencia ou pela shuttle, vivo e livre."
 
 /datum/objective/escape/check_completion()
 	if(issilicon(owner.current))
@@ -289,7 +289,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 		target_real_name = target.current.real_name
 		explanation_text = "Escape pela shuttle ou pod de emergencia com a indentidade de [target_real_name], o [target.assigned_role] usando o cartao de indentificacao do alvo."
 	else
-		explanation_text = "Free Objective"
+		explanation_text = "Objetivo livre"
 
 /datum/objective/escape/escape_with_identity/check_completion()
 	if(!target_real_name)
@@ -304,7 +304,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 	return 0
 
 /datum/objective/die
-	explanation_text = "Morreu gloriosamente."
+	explanation_text = "Morrer gloriosamente."
 
 /datum/objective/die/check_completion()
 	if(!owner.current || owner.current.stat == DEAD || isbrain(owner.current))
@@ -316,7 +316,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 
 
 /datum/objective/survive
-	explanation_text = "Permaneceu vivo ate o final(parabens seu merda)"
+	explanation_text = "Permanecer vivo ate o final"
 
 /datum/objective/survive/check_completion()
 	if(!owner.current || owner.current.stat == DEAD || isbrain(owner.current))
@@ -410,7 +410,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 /datum/objective/download
 /datum/objective/download/proc/gen_amount_goal()
 	target_amount = rand(10,20)
-	explanation_text = "Baixando [target_amount] niveis de segurança."
+	explanation_text = "Baixar [target_amount] niveis de seguranÃ§a."
 	return target_amount
 
 
@@ -528,7 +528,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 		target = pick(possible_targets)
 
 	if(target && target.current)
-		explanation_text = "O Shoal precisa de [target.current.real_name], o [target.assigned_role]. Caputure ainda vivo."
+		explanation_text = "O Shoal precisa de [target.current.real_name], o [target.assigned_role]. Caputure-o ainda vivo."
 	else
 		explanation_text = "Objetivo livre"
 	return target
@@ -557,37 +557,37 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 		if(1)
 			target = /obj/structure/particle_accelerator
 			target_amount = 6
-			loot = "um acelerador de particulas inteiro"
+			loot = "Um acelerador de particulas inteiro"
 		if(2)
 			target = /obj/machinery/the_singularitygen
 			target_amount = 1
-			loot = "um gerador de singularidade gravitacional"
+			loot = "Um gerador de singularidade gravitacional"
 		if(3)
 			target = /obj/machinery/power/emitter
 			target_amount = 4
-			loot = "quatro emissores"
+			loot = "Quatro emissores"
 		if(4)
 			target = /obj/machinery/nuclearbomb
 			target_amount = 1
-			loot = "uma bomba nuclear"
+			loot = "Uma bomba nuclear"
 		if(5)
 			target = /obj/item/weapon/gun
 			target_amount = 6
-			loot = "seis armas, Tasers e outras armas nao leitais sao permitidas"
+			loot = "Seis armas, Tasers e outras armas nao leitais sao permitidas"
 		if(6)
 			target = /obj/item/weapon/gun/energy
 			target_amount = 4
-			loot = "quatro armas de ernergia"
+			loot = "Quatro armas de ernergia"
 		if(7)
 			target = /obj/item/weapon/gun/energy/laser
 			target_amount = 2
-			loot = "duas armas laser"
+			loot = "Duas armas laser"
 		if(8)
 			target = /obj/item/weapon/gun/energy/ionrifle
 			target_amount = 1
-			loot = "uma arma de ion"
+			loot = "Uma arma de ion"
 
-	explanation_text = "Estamos com falta de hardwares. arranje um roubando ou trocando [loot]."
+	explanation_text = "Estamos com falta de hardwares. Pegue um roubando ou trocando [loot]."
 
 /datum/objective/heist/loot/check_completion()
 	var/total_amount = 0
@@ -625,31 +625,31 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 /datum/objective/heist/salvage/choose_target()
 	switch(rand(1,8))
 		if(1)
-			target = "metal"
+			target = "Metal"
 			target_amount = 300
 		if(2)
-			target = "glass"
+			target = "Vidro"
 			target_amount = 200
 		if(3)
-			target = "plasteel"
+			target = "Plastico"
 			target_amount = 100
 		if(4)
-			target = "solid plasma"
+			target = "Plasma solida"
 			target_amount = 100
 		if(5)
-			target = "silver"
+			target = "Prata"
 			target_amount = 50
 		if(6)
-			target = "gold"
+			target = "Ouro"
 			target_amount = 20
 		if(7)
-			target = "uranium"
+			target = "Uranium"
 			target_amount = 20
 		if(8)
-			target = "diamond"
+			target = "Diamantes"
 			target_amount = 20
 
-	explanation_text = "Ransack or trade with the station and escape with [target_amount] [target]."
+	explanation_text = "Saquear ou trocar com a estaÃ§Ã£o e escapar com [target_amount] [target]."
 
 /datum/objective/heist/salvage/check_completion()
 	var/total_amount = 0
@@ -703,7 +703,7 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 	return 0
 
 /datum/objective/heist/inviolate_death
-	explanation_text = "Siga o Inviolate. Minimize as mortes e a perda de recursos."
+	explanation_text = "Siga o Inviolado. Minimize as mortes e a perda de recursos."
 
 /datum/objective/heist/inviolate_death/check_completion()
 	var/vox_allowed_kills = 3 // The number of people the vox can accidently kill. Mostly a counter to people killing themselves if a raider touches them to force fail.
@@ -731,39 +731,39 @@ var/list/potential_theft_objectives = subtypesof(/datum/theft_objective) - /datu
 			target = /obj/item/weapon/stock_parts/cell
 			target_amount = 10
 			target_rating = 3
-			itemname = "dez celulas de energia de alta capacidade"
+			itemname = "Dez celulas de energia de alta capacidade"
 		if(2)
 			target = /obj/item/weapon/stock_parts/manipulator
 			target_amount = 20
-			itemname = "vinte micro manpuladores"
+			itemname = "Vinte micro manpuladores"
 		if(3)
 			target = /obj/item/weapon/stock_parts/matter_bin
 			target_amount = 20
-			itemname = "vinte matter bins"
+			itemname = "Vinte matter bins"
 		if(4)
 			target = /obj/item/weapon/stock_parts/micro_laser
 			target_amount = 15
-			itemname = "quinze micro-lasers"
+			itemname = "Quinze micro-lasers"
 		if(5)
 			target = /obj/item/weapon/stock_parts/capacitor
 			target_amount = 15
-			itemname = "quinze capacitores"
+			itemname = "Quinze capacitores"
 		if(6)
 			target = /obj/item/weapon/stock_parts/subspace/filter
 			target_amount = 4
-			itemname = "quatro filtros de hiper ondas"
+			itemname = "Quatro filtros de hiper ondas"
 		if(7)
 			target = /obj/item/solar_assembly
 			target_amount = 10
-			itemname = "dez montagens de painel solar"
+			itemname = "Dez montagens de painel solar"
 		if(8)
 			target = /obj/item/device/flash
 			target_amount = 6
-			itemname = "seis flashes"
-	explanation_text = "Estamos com poucas peças sobressalentes. Troque por [itemname]."
+			itemname = "Seis flashes"
+	explanation_text = "Estamos com poucas peÃ§as sobressalentes. Troque por [itemname]."
 
 //wizard
 
 /datum/objective/wizchaos
-	explanation_text = "Faça uma grande estraga na estação o máximo que puder. Envie a os trouxas da Nanotrasen sem varinha uma mensagem!"
+	explanation_text = "FaÃ§a o mÃ¡ximo de estrago na estaÃ§Ã£o que puder. Envie para os trouxas da Nanotrasen sem varinha uma mensagem!"
 	completed = 1
